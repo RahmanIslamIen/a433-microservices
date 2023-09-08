@@ -7,4 +7,4 @@ docker build -t "item-app:v1" .
 
 docker images
 
-docker push "item-app:v1"
+docker push "rahmanislamien/item-app:v1"
