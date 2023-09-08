@@ -1,8 +1,10 @@
 #!/bin/bash
 
-image_name="item-app"
+image_name="rahmanislamien/item-app"
 image_tag="v1"
 
 docker build -t "item-app:v1" .
 
 docker images
+
+docker push "$image_name:$image_tag"
