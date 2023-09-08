@@ -3,7 +3,7 @@ services:
   item-app:
     image: item-app
     ports:
-      - "80:80"
+      - "80:8080"
     depends_on:
       - item-db
 
