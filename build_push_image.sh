@@ -7,4 +7,4 @@ docker build -t "item-app:v1" .
 
 docker images
 
-docker push "$image_name:$image_tag"
+docker push "item-app:v1"
