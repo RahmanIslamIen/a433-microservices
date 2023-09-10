@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# untuk username dan password nya
-DOCKER_USERNAME="username"
-DOCKER_PASSWORD="password"
+# untuk username dan password nya buat login kalo belum login docker desktop
+# DOCKER_USERNAME="username"
+# DOCKER_PASSWORD="password"
 
-# bagian nama repo dan nama image
+# bagian untuk nama repo dan nama image
 DOCKER_REPO="nama_repo"
 IMAGE_NAME="karsajobs-backend"
 
