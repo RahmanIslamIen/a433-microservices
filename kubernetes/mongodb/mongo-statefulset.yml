@@ -36,18 +36,16 @@ spec:
               mountPath: /config
             - name: mongo-credentials
               mountPath: /etc/mongo-credentials
-  volumeClaimTemplates:
-    - metadata:
-        name: mongo-persistent-storage
-      spec:
-        accessModes: ["ReadWriteOnce"]
-        resources:
-          requests:
-            storage: 1Gi
-    - metadata:
-        name: mongo-config
-      spec:
-        volumes:
-          - name: mongo-credentials
-            secret:
-              secretName: mongo-credentials
+      volumes:
+        - name: mongodb-persistent-storage
+          persistentVolumeClaim:
+            claimName: mongo-pvc
+        - name: mongodb-secret-mount
+          secret:
+            secretName: mongo-secret
+        - name: mongodb-config-mount
+          configMap:
+            name: mongo-configmap
+            items:
+              - key: mongo.conf
+                path: mongo.conf
