@@ -16,5 +16,8 @@ docker tag $IMAGE_NAME:$IMAGE_TAG $IMAGE_NAME:$IMAGE_TAG
 # Push container image ke Docker Hub
 docker push $IMAGE_NAME:$IMAGE_TAG
 
+# kode untuk mendeploy dengan docker compose shipping service
+docker-compose up -d
+
 # Logout dari Docker Hub kalo butuh mau log-out
 # docker logout
