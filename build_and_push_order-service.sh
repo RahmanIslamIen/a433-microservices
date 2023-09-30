@@ -13,7 +13,7 @@ docker build -t $IMAGE_NAME:$IMAGE_TAG .
 # Tag container image
 docker tag $IMAGE_NAME:$IMAGE_TAG $IMAGE_NAME:$IMAGE_TAG
 
-# Push container image ke Docker Hub
+# Push container image ke Docker Huba alias upload
 docker push $IMAGE_NAME:$IMAGE_TAG
 
 # Logout dari Docker Hub kalo butuh mau log-out
