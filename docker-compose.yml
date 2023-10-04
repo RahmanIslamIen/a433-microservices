@@ -15,7 +15,6 @@ services:
   order-service:
     build:
       context: ./order-service
-      target: dev
     volumes:
       - ./order-service:/src
     depends_on:
@@ -30,7 +29,6 @@ services:
   shipping-service:
     build:
       context: ./shipping-service
-      target: dev
     volumes:
       - ./shipping-service:/src
     depends_on:
