@@ -13,8 +13,7 @@ services:
       - app_network
 
   order-service:
-    build:
-      context: ./order-service
+    image: rahmanislamien/order-service
     volumes:
       - ./order-service:/src
     depends_on:
@@ -27,8 +26,7 @@ services:
       - app_network
 
   shipping-service:
-    build:
-      context: ./shipping-service
+    image: rahmanislamien/shipping-service
     volumes:
       - ./shipping-service:/src
     depends_on:
