@@ -1,8 +1,8 @@
-FROM node:18-alpine as builder
+FROM node:18-alpine 
 
 WORKDIR /app
 
-COPY package* ./
+COPY * ./
 
 # tambah script wait-for-it.sh
 RUN apk add --no-cache bash
@@ -10,8 +10,6 @@ RUN wget -O /bin/wait-for-it.sh https://raw.githubusercontent.com/vishnubob/wait
 RUN chmod +x /bin/wait-for-it.sh
 
 RUN npm ci
-
-COPY ./*.js ./
 
 EXPOSE 3000
 
