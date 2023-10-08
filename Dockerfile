@@ -2,7 +2,7 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-COPY * ./
+COPY . .
 
 # tambah script wait-for-it.sh
 RUN apk add --no-cache bash
